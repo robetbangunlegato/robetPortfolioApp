@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Swiper CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- alpinejs -->
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <title>Robet Portfolio</title>
+    <style>
+      .typing-container {
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0ch; /* awalnya tidak terlihat */
+        border-right: 2px solid black; /* cursor */
+        animation: typing 5s steps(17) infinite, blink 0.7s step-end infinite;
+      }
+
+      @keyframes typing {
+        0% {
+          width: 0ch;
+        }
+        50% {
+          width: 17ch; /* panjang teks "Selamat datang 🎉" */
+        }
+        90% {
+          width: 17ch;
+        }
+        100% {
+          width: 0ch;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+        100% {
+          border-color: transparent;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <!-- navigation bar -->
+      <header
+        class="text-center shadow-md transition-all duration-300 ease-in-out overflow-hidden max-h-0 rounded-br-lg rounded-bl-lg border-1 border-gray-100">
+        <div class="p-2">
+          <a href="#aboutSection" class="text-md font-semibold">Tentang saya</a>
+        </div>
+        <div class="p-2 bg-gray-100">
+          <a href="#portfolioSection" class="text-md font-semibold"
+            >Portfolio/hasil kerja</a
+          >
+        </div>
+        <div class="p-2">
+          <a href="#contactSection" class="text-md font-semibold">Kontak</a>
+        </div>
+      </header>
+
+      <!-- expand button navigation bar -->
+      <div
+        class="p-4 shadow-lg relative flex items-center text-xl font-bold justify-end"
+        id="open-navbar-button">
+        <!-- Teks di tengah secara absolut -->
+        <p
+          class="absolute left-1/2 transform -translate-x-1/2 text-center typing-container">
+          Selamat datang 🎉
+        </p>
+
+        <!-- Tombol di kanan -->
+        <button>
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- close button navigation bar -->
+      <div class="flex justify-center p-3 hidden" id="close-navbar-button">
+        <button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2">
+            <path
+              d="M6 9l6 6 6-6"
+              stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <!-- end navigation bar -->
+
+      <!-- main/content -->
+      <main class="mx-auto h-auto grid grid-cols-1 gap-3 text-center mt-3 px-4">
+        <!-- about section -->
+        <section id="aboutSection" class="">
+          <img
+            src="assets/avatar.jpg"
+            alt=""
+            class="rounded-full p-5 h-64 w-64 inline-block shadow-md" />
+          <div class="flex flex-col justify-center items-center">
+            <h1 class="text-2xl font-bold">Robet Bangun Legato</h1>
+            <p>fotografer andalan kamu</p>
+          </div>
+          <div class="pt-3">
+            <div class="px-5 pt-6">
+              <h1 class="text-3xl font-bold text-start">Hai👋,</h1>
+              <p class="text-justify mt-3">
+                Saya Robet Bangun Legato, seorang fotografer yang siap membantu
+                kamu dalam mengabadikan momen-momen berharga. Dengan pengalaman
+                bertahun-tahun di bidang fotografi, saya berkomitmen untuk
+                memberikan hasil terbaik yang sesuai dengan keinginanmu.
+              </p>
+            </div>
+            <div>
+              <p class="mt-10 text-2xl font-bold">Kenalan lebih dekat</p>
+              <div
+                class="grid justify-center items-center mt-3 gap-3 shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 py-7">
+                <p class="font-thin">Tekan logo untuk langsung ke aplikasi</p>
+
+                <a
+                  href="https://www.instagram.com/robetbangunlegato/"
+                  target="_blank"
+                  class="grid px-4 py-2 rounded-lg mx-2 justify-center">
+                  <img src="assets/instagram.png" alt="" class="w-20 h-20" />
+                  Instagram
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/robet-bangun-legato-2b5333301/"
+                  target="_blank"
+                  class="grid px-4 py-2 rounded-lg mx-2 justify-center">
+                  <img src="assets/linkedin.png" alt="" class="w-20 h-20" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- portfolio section -->
+        <section id="portfolioSection" class="mt-10">
+          <!-- portfolio section -->
+          <h1 class="text-2xl font-bold">Hasil Foto</h1>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-3">
+            <div class="">
+              <!-- carousel -->
+              <!-- Swiper utama -->
+              <div class="shadow-lg rounded-lg">
+                <div
+                  class="swiper mySwiper w-full h-[300px] rounded-tr-lg rounded-tl-lg overflow-hidden">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" onclick="openModal(0)">
+                      <img
+                        src="assets/foto-1.jpg"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="swiper-slide" onclick="openModal(1)">
+                      <img
+                        src="assets/foto-2.jpg"
+                        class="w-full h-full object-contain" />
+                    </div>
+                    <div class="swiper-slide" onclick="openModal(2)">
+                      <img
+                        src="assets/foto-3.jpg"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="swiper-slide" onclick="openModal(3)">
+                      <img
+                        src="assets/foto-4.jpg"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="swiper-slide" onclick="openModal(4)">
+                      <img
+                        src="assets/foto-5.jpg"
+                        class="w-full h-full object-cover" />
+                    </div>
+                    <div class="swiper-slide" onclick="openModal(5)">
+                      <img
+                        src="assets/foto-6.jpg"
+                        class="w-full h-full object-cover" />
+                    </div>
+                  </div>
+
+                  <!-- Navigasi -->
+                  <div
+                    class="swiper-button-next bg-black"
+                    style="color: white"></div>
+                  <div
+                    class="swiper-button-prev bg-black"
+                    style="color: white"></div>
+                </div>
+                <p
+                  class="bg-gray-200 text-center text-2xl font-bold rounded-bl-lg rounded-br-lg">
+                  Momen Aqiqah
+                </p>
+              </div>
+
+              <!-- Modal Preview (disembunyikan dulu) -->
+              <div
+                id="previewModal"
+                onclick="handleBackdropClick(event)"
+                class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+                <div
+                  class="relative w-full max-w-4xl h-full"
+                  id="previewContent">
+                  <!-- Tombol tutup -->
+                  <button
+                    onclick="closeModal()"
+                    class="absolute top-2 right-2 text-white text-3xl z-50">
+                    ✕
+                  </button>
+
+                  <!-- Swiper di dalam modal -->
+                  <div class="swiper previewSwiper w-full h-full">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-1.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-2.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-3.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-4.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-5.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="swiper-zoom-container">
+                          <img
+                            src="assets/foto-6.jpg"
+                            class="w-full h-full object-contain" />
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="swiper-button-next bg-black"
+                      style="color: white"></div>
+                    <div
+                      class="swiper-button-prev bg-black"
+                      style="color: white"></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end carousel -->
+            </div>
+          </div>
+        </section>
+        <!-- contact section -->
+        <section id="contactSection" class="mt-10 mb-10">
+          <h1 class="text-2xl font-bold">Mau foto kaya mereka?</h1>
+          <p class="">Silakan hubungi melalui WhatsApp atau Email</p>
+          <div
+            class="grid justify-center items-center mt-3 gap-3 shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 py-7">
+            <p class="font-thin">Tekan logo untuk langsung ke aplikasi</p>
+            <a
+              href="https://wa.me/628153857185?text=Halo kak,nama saya _ ingin tanya harga untuk acara _ dialamat _ berapa ya?"
+              class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
+              <img
+                src="assets/whatsapp.png"
+                alt=""
+                class="inline-block w-20 h-20" />
+              WhatsApp
+            </a>
+            <a
+              href="mailto:robetbangunlegato@gmail.com"
+              class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
+              <img
+                src="assets/gmail.png"
+                alt=""
+                class="inline-block w-20 h-20" />
+              Email
+            </a>
+            <h1 class="text-xl mt-3">Kutunggu pesan dari kamu ya. 😊</h1>
+          </div>
+        </section>
+      </main>
+      <!-- end main -->
+
+      <!-- footer -->
+      <!-- <footer class="bg-green-600 w-full h-auto mt-3">
+        <h1 class="text-4xl text-white">footer</h1>
+      </footer> -->
+      <!-- end footer -->
+    </div>
+    <script>
+      // Fungsi untuk membuka dan menutup navbar
+      const openNavbarButton = document.getElementById("open-navbar-button");
+      const closeNavbarButton = document.getElementById("close-navbar-button");
+      const header = document.querySelector("header");
+      openNavbarButton.addEventListener("click", () => {
+        header.classList.replace("max-h-0", "max-h-[500px]");
+        // header.classList.remove("max-h-0");
+        // header.classList.add("max-h-[500px]");
+        openNavbarButton.classList.add("hidden");
+        closeNavbarButton.classList.remove("hidden");
+      });
+      closeNavbarButton.addEventListener("click", () => {
+        openNavbarButton.classList.remove("hidden");
+        closeNavbarButton.classList.add("hidden");
+        header.classList.replace("max-h-[500px]", "max-h-0");
+        // header.classList.add("max-h-0");
+        // header.classList.remove("max-h-[500px]");
+      });
+
+      // Inisialisasi Swiper
+      // Inisialisasi Swiper untuk galeri utama dan preview
+      const mainSwiper = new Swiper(".mySwiper", {
+        loop: true,
+        navigation: {
+          nextEl: ".mySwiper .swiper-button-next",
+          prevEl: ".mySwiper .swiper-button-prev",
+        },
+      });
+
+      const previewSwiper = new Swiper(".previewSwiper", {
+        loop: true,
+        zoom: true,
+        navigation: {
+          nextEl: ".previewSwiper .swiper-button-next",
+          prevEl: ".previewSwiper .swiper-button-prev",
+        },
+      });
+
+      function openModal(index) {
+        const modal = document.getElementById("previewModal");
+        modal.classList.remove("hidden");
+        previewSwiper.slideToLoop(index); // pindahkan ke slide yang sesuai
+      }
+
+      function handleBackdropClick(event) {
+        console.log("Backdrop clicked");
+        // tutup hanya jika klik di luar konten/modal gambar
+        const content = document.getElementById("previewContent");
+        if (!content.contains(event.target)) {
+          closeModal();
+        }
+      }
+
+      function closeModal() {
+        const modal = document.getElementById("previewModal");
+        modal.classList.add("hidden");
+      }
+    </script>
+  </body>
+</html>
