@@ -116,44 +116,58 @@
       <main class="mx-auto h-auto grid grid-cols-1 gap-3 text-center mt-3 px-4">
         <!-- about section -->
         <section id="aboutSection" class="">
-          <img
-            src="assets/avatar.jpg"
-            alt=""
-            class="rounded-full p-5 h-64 w-64 inline-block shadow-md" />
-          <div class="flex flex-col justify-center items-center">
-            <h1 class="text-2xl font-bold">Robet Bangun Legato</h1>
-            <p>fotografer andalan kamu</p>
+          <div class="lg:flex lg:justify-center lg:gap-11">
+            <img
+              src="assets/avatar.jpg"
+              alt=""
+              class="rounded-full p-5 h-64 w-64 inline-block shadow-md lg:w-96 lg:h-96" />
+            <div class="flex flex-col justify-center items-center">
+              <h1 class="text-2xl font-bold lg:text-4xl">
+                Robet Bangun Legato
+              </h1>
+              <p class="lg:text-lg">fotografer andalan kamu</p>
+            </div>
           </div>
           <div class="pt-3">
-            <div class="px-5 pt-6">
-              <h1 class="text-3xl font-bold text-start">Hai👋,</h1>
-              <p class="text-justify mt-3">
-                Saya Robet Bangun Legato, seorang fotografer yang siap membantu
-                kamu dalam mengabadikan momen-momen berharga. Dengan pengalaman
-                bertahun-tahun di bidang fotografi, saya berkomitmen untuk
-                memberikan hasil terbaik yang sesuai dengan keinginanmu.
-              </p>
+            <div class="px-5 pt-6 lg:flex lg:justify-center">
+              <div class="lg:grid">
+                <h1 class="text-3xl font-bold text-start lg:text-4xl">
+                  Hai👋,
+                </h1>
+                <p class="text-justify mt-3 lg:text-xl lg:w-[800px]">
+                  Saya Robet Bangun Legato, seorang fotografer yang siap
+                  membantu kamu dalam mengabadikan momen-momen berharga. Dengan
+                  pengalaman bertahun-tahun di bidang fotografi, saya
+                  berkomitmen untuk memberikan hasil terbaik yang sesuai dengan
+                  keinginanmu.
+                </p>
+              </div>
             </div>
-            <div>
-              <p class="mt-10 text-2xl font-bold">Kenalan lebih dekat</p>
-              <div
-                class="grid justify-center items-center mt-3 gap-3 shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 py-7">
-                <p class="font-thin">Tekan logo untuk langsung ke aplikasi</p>
-
-                <a
-                  href="https://www.instagram.com/robetbangunlegato/"
-                  target="_blank"
-                  class="grid px-4 py-2 rounded-lg mx-2 justify-center">
-                  <img src="assets/instagram.png" alt="" class="w-20 h-20" />
-                  Instagram
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/robet-bangun-legato-2b5333301/"
-                  target="_blank"
-                  class="grid px-4 py-2 rounded-lg mx-2 justify-center">
-                  <img src="assets/linkedin.png" alt="" class="w-20 h-20" />
-                  LinkedIn
-                </a>
+            <div class="lg:flex lg:justify-center">
+              <div class="lg:grid lg:w-[800px]">
+                <p class="mt-10 text-2xl font-bold lg:text-3xl">
+                  Kenalan lebih dekat
+                </p>
+                <div
+                  class="grid justify-center items-center mt-3 gap-3 shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 py-7">
+                  <p class="font-thin lg:text-lg">
+                    Tekan logo untuk langsung ke aplikasi
+                  </p>
+                  <a
+                    href="https://www.instagram.com/robetbangunlegato/"
+                    target="_blank"
+                    class="grid px-4 py-2 rounded-lg mx-2 justify-center">
+                    <img src="assets/instagram.png" alt="" class="w-20 h-20" />
+                    Instagram
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/robet-bangun-legato-2b5333301/"
+                    target="_blank"
+                    class="grid px-4 py-2 rounded-lg mx-2 justify-center">
+                    <img src="assets/linkedin.png" alt="" class="w-20 h-20" />
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -161,14 +175,14 @@
         <!-- portfolio section -->
         <section id="portfolioSection" class="mt-10">
           <!-- portfolio section -->
-          <h1 class="text-2xl font-bold">Hasil Foto</h1>
-          <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mt-3">
+          <h1 class="text-2xl font-bold lg:text-4xl">Hasil Foto</h1>
+          <div class="grid grid-cols-1 gap-3 mt-3 lg:flex lg:justify-center">
             <div class="">
               <!-- carousel -->
               <!-- Swiper utama -->
               <div class="shadow-lg rounded-lg">
                 <div
-                  class="swiper mySwiper w-full h-[300px] rounded-tr-lg rounded-tl-lg overflow-hidden">
+                  class="swiper mySwiper w-full h-[300px] lg:w-[1200px] lg:h-[800px] rounded-tr-lg rounded-tl-lg overflow-hidden">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide" onclick="openModal(0)">
                       <img
@@ -211,19 +225,14 @@
                     style="color: white"></div>
                 </div>
                 <p
-                  class="bg-gray-200 text-center text-2xl font-bold rounded-bl-lg rounded-br-lg">
+                  class="bg-gray-200 text-center text-2xl font-bold rounded-bl-lg rounded-br-lg lg:text-3xl">
                   Momen Aqiqah
                 </p>
               </div>
 
               <!-- Modal Preview (disembunyikan dulu) -->
-              <div
-                id="previewModal"
-                onclick="handleBackdropClick(event)"
-                class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
-                <div
-                  class="relative w-full max-w-4xl h-full"
-                  id="previewContent">
+              <div id="previewModal" class="fixed inset-0 hidden z-50 bg-black">
+                <div class="w-full h-full" id="previewContent">
                   <!-- Tombol tutup -->
                   <button
                     onclick="closeModal()"
@@ -235,45 +244,57 @@
                   <div class="swiper previewSwiper w-full h-full">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-1.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-2.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-3.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-4.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-5.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                       <div class="swiper-slide">
-                        <div class="swiper-zoom-container">
+                        <div
+                          class="swiper-zoom-container"
+                          onclick="handleBackdropClick(event)">
                           <img
                             src="assets/foto-6.jpg"
-                            class="w-full h-full object-contain" />
+                            class="w-auto h-auto object-contain" />
                         </div>
                       </div>
                     </div>
@@ -292,30 +313,34 @@
         </section>
         <!-- contact section -->
         <section id="contactSection" class="mt-10 mb-10">
-          <h1 class="text-2xl font-bold">Mau foto kaya mereka?</h1>
-          <p class="">Silakan hubungi melalui WhatsApp atau Email</p>
-          <div
-            class="grid justify-center items-center mt-3 gap-3 shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 py-7">
-            <p class="font-thin">Tekan logo untuk langsung ke aplikasi</p>
-            <a
-              href="https://wa.me/628153857185?text=Halo kak,nama saya _ ingin tanya harga untuk acara _ dialamat _ berapa ya?"
-              class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
-              <img
-                src="assets/whatsapp.png"
-                alt=""
-                class="inline-block w-20 h-20" />
-              WhatsApp
-            </a>
-            <a
-              href="mailto:robetbangunlegato@gmail.com"
-              class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
-              <img
-                src="assets/gmail.png"
-                alt=""
-                class="inline-block w-20 h-20" />
-              Email
-            </a>
-            <h1 class="text-xl mt-3">Kutunggu pesan dari kamu ya. 😊</h1>
+          <h1 class="text-2xl font-bold lg:text-4xl">Mau foto kaya mereka?</h1>
+          <p class="lg:text-lg">Silakan hubungi melalui WhatsApp atau Email</p>
+          <div class="justify-center items-center mt-3 gap-3 py-7 lg:flex">
+            <div
+              class="shadow-xl rounded-xl border-1 border-gray-100 bg-gray-50 lg:grid lg:w-[800px] py-7">
+              <p class="font-thin lg:text-lg">
+                Tekan logo untuk langsung ke aplikasi
+              </p>
+              <a
+                href="https://wa.me/628153857185?text=Halo kak,nama saya _ ingin tanya harga untuk acara _ dialamat _ berapa ya?"
+                class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
+                <img
+                  src="assets/whatsapp.png"
+                  alt=""
+                  class="inline-block w-20 h-20" />
+                WhatsApp
+              </a>
+              <a
+                href="mailto:robetbangunlegato@gmail.com"
+                class="px-4 py-2 rounded-lg mx-2 grid justify-center items-center">
+                <img
+                  src="assets/gmail.png"
+                  alt=""
+                  class="inline-block w-20 h-20" />
+                Email
+              </a>
+              <h1 class="text-xl mt-3">Kutunggu pesan dari kamu ya. 😊</h1>
+            </div>
           </div>
         </section>
       </main>
@@ -334,8 +359,6 @@
       const header = document.querySelector("header");
       openNavbarButton.addEventListener("click", () => {
         header.classList.replace("max-h-0", "max-h-[500px]");
-        // header.classList.remove("max-h-0");
-        // header.classList.add("max-h-[500px]");
         openNavbarButton.classList.add("hidden");
         closeNavbarButton.classList.remove("hidden");
       });
@@ -343,8 +366,6 @@
         openNavbarButton.classList.remove("hidden");
         closeNavbarButton.classList.add("hidden");
         header.classList.replace("max-h-[500px]", "max-h-0");
-        // header.classList.add("max-h-0");
-        // header.classList.remove("max-h-[500px]");
       });
 
       // Inisialisasi Swiper
@@ -373,10 +394,9 @@
       }
 
       function handleBackdropClick(event) {
-        console.log("Backdrop clicked");
+        const imageClicked = event.target.closest("img");
         // tutup hanya jika klik di luar konten/modal gambar
-        const content = document.getElementById("previewContent");
-        if (!content.contains(event.target)) {
+        if (!imageClicked) {
           closeModal();
         }
       }
